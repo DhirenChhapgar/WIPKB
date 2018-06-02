@@ -4,7 +4,7 @@ Adding Attribute Support to Lot/Serial Number
 ==================================
 Acumatica ERP lets you define attributes for flexible, meaningful classification of an Entity (Lead, Stock/Non-Stock Items Etc.) as required for your company's specific needs. An attribute is a property that enables you to specify additional information for Entity in the system. 
 
-This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic (such as color variation and stone pattern) can be tracked. With this extension, you can do the following:
+This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic (such as color variation and stone pattern) can be tracked. With this extension, you can:
 
 * Define attributes to be tracked for each Lot/Serial class
 * Specify Attribute values while receiving items via Allocations dialog in Puchase Receipt and Inventory Receipt screens
@@ -37,9 +37,12 @@ Quick Start
 
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
-6. Apply Attribute From First button copies attribute values specified for very first Lot/Serial Number and applies to rest of the Lot/Serial Number displayed in the dialog. One can specify value for each individual Lot/Serial Number as well.
+6. **Apply Attribute From First** button copies attribute values specified for very first Lot/Serial Number and applies to rest of the Lot/Serial Number displayed in the dialog. One can specify value for each individual Lot/Serial Number as well.
 7. Attribute value can be assigned for Lot/Serial Number while receiving inventory via IN Receipt Screen (IN301000) similarly via Allocations dialog.
 8. Attribute values and image can be assigned to Lot/Serial Number/s via custom **Item Lot/Serial # Info** screen (IN202501) as well.
+
+![Screenshot](/_ReadMeImages/IN202501.png)
+
 9. Attribute values can be imported via **Import Lot/Serial Attributes** import scenario made available via customization package.
 
 ![Screenshot](/_ReadMeImages/SM206025.png)
