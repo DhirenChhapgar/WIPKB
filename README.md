@@ -1,8 +1,8 @@
 [![Project Status](http://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
 
-Adding Attribute Support to out-of-box Lot/Serial Number
+Adding Attribute Support to Lot/Serial Number
 ==================================
-An extension that allows to add attribute support to out-of-box Lot/Serial Number.
+An extension that allows to add attribute support to Lot/Serial Number.
 
 ### Prerequisites
 * Acumatica 6.1 or higher
