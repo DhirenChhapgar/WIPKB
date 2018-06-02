@@ -4,12 +4,13 @@ Adding Attribute Support to Lot/Serial Number
 ==================================
 Acumatica ERP lets you define attributes for flexible, meaningful classification of an Entity (Lead, Stock/Non-Stock Items Etc.) as required for your company's specific needs. An attribute is a property that enables you to specify additional information for Entity in the system. 
 
-This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic (such as color variation and stone pattern) can be tracked. With this extension, you can:
+This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic (Example color variation, stone pattern etc in case of Granite Slab) can be tracked. With this extension, you can:
 
 * Define attributes to be tracked for each Lot/Serial class
-* Specify Attribute values while receiving items via Allocations dialog in Puchase Receipt and Inventory Receipt screens
-* Search and allocate Lot/Serial Number by attribute value/s in Sales Order screen.
-* Bulk import of attribute values via Import Scenario 
+* Assign attribute values while receiving items via Allocations dialog in Puchase Receipt and Inventory Receipt screens
+* Assign attribute values and image for individual Lot/Serial Number
+* Bulk assignment of attribute values via Import Scenario 
+* Search and allocate Lot/Serial Number by attribute value/s in Sales Order screen
 
 ### Prerequisites
 * Acumatica 6.1 or higher
@@ -27,8 +28,7 @@ Quick Start
 ### Usage
 
 1. Go to Attributes Screen (CS205000) and create new attributes if you need to.
-2. Navigate to Lot/Serial classes Screen (IN207000) and select the class for which you need to specify list of Attributes. A new  attribute Tab is available to include attributes.
-
+2. Navigate to Lot/Serial classes Screen (IN207000) and select the class for which you need to specify list of Attributes. A new attribute Tab is available to include attributes.
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
@@ -41,7 +41,7 @@ Quick Start
 8. Attribute values and image can be assigned to Lot/Serial Number/s via custom **Item Lot/Serial # Info** screen (IN202501) as well.
 ![Screenshot](/_ReadMeImages/IN202501.png)
 
-9. Attribute values can be imported via **Import Lot/Serial Attributes** import scenario made available via customization package.
+9. Attribute values can be imported via **Import Lot/Serial Attributes** custom import scenario available via customization package.
 ![Screenshot](/_ReadMeImages/SM206025.png)
 ![Screenshot](/_ReadMeImages/SM206036.png)
 
