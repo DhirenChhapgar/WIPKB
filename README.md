@@ -38,6 +38,7 @@ Quick Start
 8. Attribute values and image can be assigned to Lot/Serial Number/s via custom **Item Lot/Serial # Info** screen (IN202501) as well.
 9. Attribute values can be imported via **Import Lot/Serial Attributes** import scenario made available via customization package.
 ![Screenshot](/_ReadMeImages/SM206025.png)
+![Screenshot](/_ReadMeImages/SM206036.png)
 10. **Item Lot/Serial Search** option can be utilized to search Lot/Serial Number by attribute value and allocate in Sales Order Entry screen (SO301000)
 ![Screenshot](/_ReadMeImages/SO301000-1.png)
 ![Screenshot](/_ReadMeImages/SO301000-2.png)
