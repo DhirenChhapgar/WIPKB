@@ -29,31 +29,41 @@ Quick Start
 1. Go to Attributes Screen (CS205000) and create new attributes if you need to.
 2. Navigate to Lot/Serial classes Screen (IN207000) and select the class for which you need to specify list of Attributes, a new attribute Tab is available to include attributes.
 
+<p align="center">
 ![Screenshot](/_ReadMeImages/IN207000.png)
+</p>
 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
 4. Create Purchase Order (PO301000) for Stock Item created in Step # 3. And move forward with creating Purchase Receipt (PO302000) for this Purchase Order.
 5. Click on Allocations button, you should be able to see Attributes specified in Step # 2 and can specify value for them.
 
+<p align="center">
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+</p>
 
 6. **Apply Attribute From First** button copies attribute values specified for very first Lot/Serial Number and applies to rest of the Lot/Serial Number displayed in the dialog. One can specify value for each individual Lot/Serial Number as well.
 7. Attribute value can be assigned for Lot/Serial Number while receiving inventory via IN Receipt Screen (IN301000) similarly via Allocations dialog.
 8. Attribute values and image can be assigned to Lot/Serial Number/s via custom **Item Lot/Serial # Info** screen (IN202501) as well.
 
+<p align="center">
 ![Screenshot](/_ReadMeImages/IN202501.png)
+</p>
 
 9. Attribute values can be imported via **Import Lot/Serial Attributes** import scenario made available via customization package.
 
+<p align="center">
 ![Screenshot](/_ReadMeImages/SM206025.png)
 
 ![Screenshot](/_ReadMeImages/SM206036.png)
+</p>
 
-10. **Item Lot/Serial Search** option can be utilized to search Lot/Serial Number by attribute value and allocate in Sales Order Entry screen (SO301000)
+10. **Item Lot/Serial Search** option can be utilized to search Lot/Serial Number by attribute value and allocate in Sales Order Entry screen (SO301000). Columns for Attribute/s will be dynamically displayed once Lot/Serial Class value is specified.
 
+<p align="center">
 ![Screenshot](/_ReadMeImages/SO301000-1.png)
 
 ![Screenshot](/_ReadMeImages/SO301000-2.png)
+</p>
 
 Known Issues
 ------------
