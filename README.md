@@ -45,7 +45,7 @@ Quick Start
 ![Screenshot](/_ReadMeImages/SM206025.png)
 ![Screenshot](/_ReadMeImages/SM206036.png)
 
-10. **Item Lot/Serial Search** option can be utilized to search Lot/Serial Number by attribute value and allocate in Sales Order Entry screen (SO301000). Columns for Attribute/s will be dynamically displayed once Lot/Serial Class value is specified.
+10. **Item Lot/Serial Search** option can be utilized to search Lot/Serial Number by attribute value and allocate in Sales Order Entry screen (SO301000). Columns for Attribute/s will be dynamically added/removed based on specified Lot/Serial class value.
 ![Screenshot](/_ReadMeImages/SO301000-1.png)
 ![Screenshot](/_ReadMeImages/SO301000-2.png)
 
