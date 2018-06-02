@@ -4,7 +4,7 @@ Adding Attribute Support to Lot/Serial Number
 ==================================
 Acumatica ERP lets you define attributes for flexible, meaningful classification of an Entity (Lead, Stock/Non-Stock Items Etc.) as required for your company's specific needs. An attribute is a property that enables you to specify additional information for Entity in the system. 
 
-This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic can be tracked. With this extension, you can do the following:
+This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic (such as color variation and stone pattern) can be tracked. With this extension, you can do the following:
 
 * Define attributes to be tracked for each Lot/Serial class
 * Specify Attribute values while receiving items via Allocations dialog in Puchase Receipt and Inventory Receipt screens
