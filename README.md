@@ -28,8 +28,8 @@ Quick Start
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 6. Apply Attribute From First button copies attribute values specified for very first Lot/Serial Number and applies to rest of the Lot/Serial Number displayed in the dialog. One can specify value for each individual Lot/Serial Number as well.
 7. Attribute value can be assigned for Lot/Serial Number while receiving inventory via IN Receipt Screen (IN301000) similarly via Allocation dialog.
-8. Attribute values and image can be assigned to Lot/Serial Number/s via custom Item Lot/Serial # Info screen (IN202501) as well.
-9. Attribute values can be imported via #Import Lot/Serial Attributes# import scenario made available via customization package.
+8. Attribute values and image can be assigned to Lot/Serial Number/s via custom *Item Lot/Serial # Info* screen (IN202501) as well.
+9. Attribute values can be imported via *Import Lot/Serial Attributes* import scenario made available via customization package.
 ![Screenshot](/_ReadMeImages/SM206025.png)
 10. 
 
