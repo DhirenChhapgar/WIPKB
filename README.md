@@ -29,6 +29,7 @@ Quick Start
 
 1. Go to Attributes Screen (CS205000) and create new attributes if you need to.
 2. Navigate to Lot/Serial classes Screen (IN207000) and select the class for which you need to specify list of Attributes. A new attribute Tab is available to include attributes.
+
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
