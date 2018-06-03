@@ -13,7 +13,7 @@ This extension allows to add attribute support to Lot/Serial Number so that each
 * Search and allocate Lot/Serial Number by attribute value/s in Sales Order screen
 
 ### Prerequisites
-* Acumatica 6.1 or higher
+* Acumatica 2017 R2 (17.209.0028+) or higher
 
 Quick Start
 -----------
