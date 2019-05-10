@@ -32,6 +32,7 @@ Quick Start
 
 1. The first configuration step is Sales Order Preferences and we can use this tab to select the default configuration settings which will be applied to the imported Amazon orders and these settings are common for both FBA and FBM type of orders
 2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
+
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 ##### Configuration Settings Summary
@@ -47,6 +48,7 @@ Quick Start
 #### Marketplace Configuration
 
 Marketplace Configuration Screen is used to control various features of the Integration. The configuration settings will include the following fields information. Please refer to the below screenshot.
+
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 ##### Marketplace Configuration Summary
@@ -55,7 +57,8 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | :---                  | :--- |
 | **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
 | **Status** | This field is used to mark a specific Integration as Active / Inactive. If the integration is marked as Inactive, then system will not display the details/logs related to this specific integration.  |
-| **Integration Type** | Depending on the selection of the Integration type, respective Marketplace ID will be used for the API calls to fetch the Orders / Data related to that respective Marketplace, example Marketplace ID will be “XXXXXXXXXXXXX” for Amazon FBA (US). The list of values for this field is provided below: <ul><li>item1</li><li>item2</li></ul> |
+| **Integration Type** | Depending on the selection of the Integration type, respective Marketplace ID will be used for the API calls to fetch the Orders / Data related to that respective Marketplace, example Marketplace ID will be “XXXXXXXXXXXXX” for Amazon FBA (US). The list of values for this field is provided below: 
+<ul><li>Amazon FBA</li><li>Amazon.ca FBA</li><li>Amazon.co.uk FBA</li><li>Amazon.de FBA</li><li>Amazon.jp FBA</li><li>Amazon.in FBA</li><li>Amazon FBM</li></ul> |
 | **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
 | **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
 | **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
