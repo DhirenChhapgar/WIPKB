@@ -55,16 +55,20 @@ Marketplace Configuration Screen is used to control various features of the Inte
 
 | Element               | Description |
 | :---                  | :--- |
-| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
-| **Status** | This field is used to mark a specific Integration as Active / Inactive. If the integration is marked as Inactive, then system will not display the details/logs related to this specific integration.  |
-| **Integration Type** | Depending on the selection of the Integration type, respective Marketplace ID will be used for the API calls to fetch the Orders / Data related to that respective Marketplace, example Marketplace ID will be “XXXXXXXXXXXXX” for Amazon FBA (US). The list of values for this field is provided below: 
-<ul><li>Amazon FBA</li><li>Amazon.ca FBA</li><li>Amazon.co.uk FBA</li><li>Amazon.de FBA</li><li>Amazon.jp FBA</li><li>Amazon.in FBA</li><li>Amazon FBM</li></ul> |
-| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
-| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
-| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
-| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
-
-
+| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID. |
+| **Status** | This field is used to mark a specific Integration as Active / Inactive. If the integration is marked as Inactive, then system will not display the details/logs related to this specific integration. |
+| **Integration Type** | Depending on the selection of the Integration type, respective Marketplace ID will be used for the API calls to fetch the Orders / Data related to that respective Marketplace, example Marketplace ID will be “XXXXXXXXXXXXX” for Amazon FBA (US). The list of values for this field is provided below: <ul><li>Amazon FBA</li><li>Amazon.ca FBA</li><li>Amazon.co.uk FBA</li><li>Amazon.de FBA</li><li>Amazon.jp FBA</li><li>Amazon.in FBA</li><li>Amazon FBM</li></ul> |
+| **Warehouse** | All active warehouses will be loaded from the system to select specific warehouse in Acumatica for order processing. All the imported orders under this specific integration will be associated to this configured warehouse by default. |
+| **Order Type** | All the active order types will be loaded from the system to select specific Order type. Based on the selected integration type these order type template will be loaded for selection. <ul><li>For FBA integrations types the system will display the “IN – Invoice” type templates for the selection, whereas for FBM Integration type it will display “SO – Sales Order” template order types.</li><li> |
+| **Seller ID** | This field is used to configure the Amazon Marketplace Seller ID. |
+| **Auth Token** | This field is used to configure the Auth Token of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
+| **Access Key** | This field is used to configure the Access Key of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
+| **Secret Key** | This field is used to configure the Secret Key of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
+| **Marketplace ID** | This field is used to configure the Marketplace ID of the respective Seller. Each integration type will have its own Marketplace ID. |
+| **Description** | This field is used to add the custom description about the Integration. |
+| **Test Connection** | This field is used to add the custom description about the Integration. |
+| **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping.|
+ 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
 4. Create Purchase Order (PO301000) for Stock Item created in Step # 3. And move forward with creating Purchase Receipt (PO302000) for this Purchase Order.
 5. Click on Allocations button, you should be able to see Attributes specified in Step # 2 and can specify value for them.
