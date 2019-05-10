@@ -23,13 +23,18 @@ Quick Start
 
 ##### Install customization deployment package
 1. Download PXAmazonIntegrationPkg.zip from this repository
-2. In your Acumatica ERP instance, navigate to System -> Customization -> Customization Projects (SM204505), import PXLotSertialNbrAttributeExtPkg.zip as a customization project
+2. In your Acumatica ERP instance, navigate to System -> Customization -> Customization Projects (SM204505), import PXAmazonIntegrationPkg.zip as a customization project
 3. Publish customization project.
 
-### Usage
+### Configuration
 
-1. Go to Attributes Screen (CS205000) and create new attributes if you need to.
-2. Navigate to Lot/Serial classes Screen (IN207000) and select the class for which you need to specify list of Attributes.
+#### Sales Order Preferences
+
+1. The first configuration step is Sales Order Preferences and we can use this tab to select the default configuration settings which will be applied to the imported Amazon orders and these settings are common for both FBA and FBM type of orders
+2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
+
+##### Configuration Settings Summary
+
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
