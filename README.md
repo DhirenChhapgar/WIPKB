@@ -1,19 +1,16 @@
 [![Project Status](http://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
 
-Adding Attribute Support to Lot/Serial Number
+Amazon Marketplace Integration
 ==================================
-Acumatica ERP lets you define attributes for flexible, meaningful classification of an Entity (Lead, Stock/Non-Stock Items Etc.) as required for your company's specific needs. An attribute is a property that enables you to specify additional information for Entity in the system. 
+Using this integration user can import order details which are placed in Amazon Marketplace into Acumatica. Also, user can transfer order fulfillment details from Acumatica to Amazon Marketplace for FBM type of orders. With this approach, the sync will continuously runs between Acumatica and Amazon Marketplace for exchanging the data between two systems.
 
-This extension allows to add attribute support to Lot/Serial Number so that each Lot/Serial Number's unique characteristic (Example – color variation, stone pattern etc. in case of Granite Slab) can be tracked. With this extension, you can:
+* FBA integrations assume that all orders are placed on Amazon, and will be fulfilled by Amazon.
+* FBM orders will have sales originated on Amazon Marketplace, and merchant will fulfill the orders from their warehouse.
 
-* Define attributes to be tracked for each Lot/Serial class
-* Assign attribute values while receiving items via Allocations dialog in Purchase Receipt and Inventory Receipt screens
-* Assign attribute values and image for individual Lot/Serial Number
-* Bulk assignment of attribute values via Import Scenario 
-* Search and allocate Lot/Serial Number by attribute value/s in Sales Order screen
+This integration doesn’t include the return and refund of the orders.
 
 ### Prerequisites
-* Acumatica 2017 R2 (17.209.0028+) or higher
+* Acumatica 2018 R2 (18.204.0013+) or higher
 
 Quick Start
 -----------
