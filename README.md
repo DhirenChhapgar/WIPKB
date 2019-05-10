@@ -5,16 +5,16 @@ Amazon Marketplace Integration
 Using this integration user can import orders placed on Amazon Marketplace into Acumatica and can transfer order fulfillment details from Acumatica to Amazon Marketplace for FBM type of orders. Integration supports Fulfillment by Amazon (FBA) and Fulfillment by Merchant (FBM) fulfillment channels.
 
 This integration doesn’t include 
-* Return and refund of the orders.
+* Return and refund of orders.
 * Inventory, Products and Customers synchronize between Acumatica and Amazon Marketplace.
 * Settlement/reconcile Amazon FBA Fees etc.
 
 ### Prerequisites
 * Acumatica 2018 R2 (18.204.0013+) or higher
 * Inventory, Stock Items and Customers has to be setup prior using this integration.
-* Please make sure to have the Marketplace configurations created before the sync process initiated.
-* Ensure to have the Tax configuration done before the sync process initiated.
-* This integration requires the “Amazon Seller Professional Account” credentials for configuring the integrations. Please visit (https://developer.amazonservices.com/) for more information on getting MWS Credentials.
+* Please make sure to have Marketplace configurations created before sync process initiated.
+* Ensure to have Tax configuration done before sync process initiated.
+* This integration requires “Amazon Seller Professional Account” credentials for configuring integrations. Please visit (https://developer.amazonservices.com/) for more information on getting MWS Credentials.
 
 Quick Start
 -----------
@@ -30,7 +30,7 @@ Quick Start
 
 #### Sales Order Preferences
 
-1. The first configuration step is Sales Order Preferences and we can use this tab to select the default configuration settings which will be applied to the imported Amazon orders and these settings are common for both FBA and FBM type of orders
+1. The first configuration step is Sales Order Preferences and we can use this tab to specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
 2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
 
 ![Screenshot](/_ReadMeImages/IN207000.png)
@@ -39,15 +39,15 @@ Quick Start
 
  | Element               | Description |
  | :---                  | :--- |
- | **Guest Customer ID** | All the imported Amazon orders will be associated to this configured Guest customer.  |
- | **Tax Zone ID**       | This Tax ID will be default Tax ID to all the imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. <ul><li>Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID</ul></li> |
- | **Payment Method ID** | This Payment Method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
- | **Ship Via**          | This Ship Via method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. Admin can change the Ship Via method if requires but this will not impact anything at Amazon side. |
- | **Initial From Date** | This field is used to set, after which date of orders the system should consider and available for sync in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then the system will display the amazon orders which are placed from 1st January 2019 only. A note is provided for this field as “Baseline Date beyond which Orders will be synced from Amazon into Acumatica. Please note that Initial From Date field cannot be changed as soon as an order is imported into Acumatica”. |
+ | **Guest Customer ID** | All imported Amazon orders will be associated to this configured Guest customer.  |
+ | **Tax Zone ID**       | This Tax ID will be default Tax ID to all imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. <ul><li>Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID</ul></li> |
+ | **Payment Method ID** | This Payment Method will be applied to all imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
+ | **Ship Via**          | This Ship Via method will be applied to all imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. |
+ | **Initial From Date** | Cut-off date after which orders will be available for sync in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then system will fetch amazon orders which are placed from 1st January 2019. |
  
 #### Marketplace Configuration
 
-Marketplace Configuration Screen is used to control various features of the Integration. The configuration settings will include the following fields information. Please refer to the below screenshot.
+Marketplace Configuration Screen is used to control various features of the Integration. The configuration settings will include following fields information.
 
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
