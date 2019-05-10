@@ -66,7 +66,7 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | **Secret Key** | This field is used to configure the Secret Key of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
 | **Marketplace ID** | This field is used to configure the Marketplace ID of the respective Seller. Each integration type will have its own Marketplace ID. |
 | **Description** | This field is used to add the custom description about the Integration. |
-| **Test Connection** | This field is used to add the custom description about the Integration. |
+| **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not for orders syncing. If the provided credentials are incorrect then the system will show an error message. |
 | **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping.|
  
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
