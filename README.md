@@ -32,15 +32,16 @@ Quick Start
 
 1. The first configuration step is Sales Order Preferences and we can use this tab to select the default configuration settings which will be applied to the imported Amazon orders and these settings are common for both FBA and FBM type of orders
 2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
+
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 ##### Configuration Settings Summary
 
 | Element  | Description |
-| ------------- | ------------- |
+| --- | --- |
 | Guest Customer ID  | All the imported Amazon orders will be associated to this configured Guest customer.  |
-| Tax Zone ID  | This Tax ID will be default Tax ID to all the imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. * Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID  |
-|--- |--- |
+| Tax Zone ID  | This Tax ID will be default Tax ID to all the imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID |
+| --- | --- |
 
 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
