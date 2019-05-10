@@ -37,13 +37,13 @@ Quick Start
 
 ##### Configuration Settings Summary
 
-| Element               | Description |
-| :---                  | :--- |
-| **Guest Customer ID** | All the imported Amazon orders will be associated to this configured Guest customer.  |
-| **Tax Zone ID**       | This Tax ID will be default Tax ID to all the imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. <ul><li>Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID</ul></li> |
-| **Payment Method ID** | This Payment Method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
-| **Ship Via**          | This Ship Via method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. Admin can change the Ship Via method if requires but this will not impact anything at Amazon side. |
-| **Initial From Date** | This field is used to set, after which date of orders the system should consider and available for sync in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then the system will display the amazon orders which are placed from 1st January 2019 only. A note is provided for this field as “Baseline Date beyond which Orders will be synced from Amazon into Acumatica. Please note that Initial From Date field cannot be changed as soon as an order is imported into Acumatica”. |
+ | Element               | Description |
+ | :---                  | :--- |
+ | **Guest Customer ID** | All the imported Amazon orders will be associated to this configured Guest customer.  |
+ | **Tax Zone ID**       | This Tax ID will be default Tax ID to all the imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. <ul><li>Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID</ul></li> |
+ | **Payment Method ID** | This Payment Method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
+ | **Ship Via**          | This Ship Via method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. Admin can change the Ship Via method if requires but this will not impact anything at Amazon side. |
+ | **Initial From Date** | This field is used to set, after which date of orders the system should consider and available for sync in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then the system will display the amazon orders which are placed from 1st January 2019 only. A note is provided for this field as “Baseline Date beyond which Orders will be synced from Amazon into Acumatica. Please note that Initial From Date field cannot be changed as soon as an order is imported into Acumatica”. |
  
 #### Marketplace Configuration
 
@@ -68,24 +68,25 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | **Description** | This field is used to add the custom description about the Integration. |
 | **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not for orders syncing. If the provided credentials are incorrect then the system will show an error message. |
 | **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping.|
- 
-3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
-4. Create Purchase Order (PO301000) for Stock Item created in Step # 3. And move forward with creating Purchase Receipt (PO302000) for this Purchase Order.
-5. Click on Allocations button, you should be able to see Attributes specified in Step # 2 and can specify value for them.
+
+#### Amazon Tax Configuration
+Amazon Tax Amount will be brought into Acumatica at the time of order sync (FBA & FBM). To match the order Taxes and Totals on both systems.
+Following are the list of steps that need to be followed to enable manual taxes in Acumatica:
+
+* Navigate to Tax Categories screen (TX205500) and create new tax category "AMAZONTC"
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
-6. **Apply Attribute from First** button copies attribute values specified for very first Lot/Serial Number and applies to rest of the Lot/Serial Number displayed in the dialog. One can specify value for each individual Lot/Serial Number as well.
-7. Attribute value can be assigned for Lot/Serial Number while receiving inventory via IN Receipt Screen (IN301000) similarly via Allocations dialog.
-8. Attribute values and image can be assigned to Lot/Serial Number/s via custom **Item Lot/Serial # Info** screen (IN202501) as well.
-![Screenshot](/_ReadMeImages/IN202501.png)
+* Navigate to Tax Zones screen (TX206000) and create new Tax Zone ID "AMAZONTZ" add assign default tax category created in prior step.
+![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
-9. Attribute values can be imported via **Import Lot/Serial Attributes** custom import scenario available via customization package.
-![Screenshot](/_ReadMeImages/SM206025.png)
-![Screenshot](/_ReadMeImages/SM206036.png)
+* Navigate to Taxes Screen (TX205000) and create new Tax ID "AMAZONTAX" and assign an unlimited Tax Schedule. Make sure to check “Propagate Manually Set Tax….” check box.
+![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
-10. **Item Lot/Serial Search** option can be utilized to search Lot/Serial Number by attribute value and allocate in Sales Order Entry screen (SO301000). Columns for Attribute/s will be dynamically added/removed based on specified Lot/Serial class value.
-![Screenshot](/_ReadMeImages/SO301000-1.png)
-![Screenshot](/_ReadMeImages/SO301000-2.png)
+* In Taxes screen, select Tax Category "AMAZONTC" created in prior step.
+![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+
+### Usage
+
 
 Known Issues
 ------------
@@ -93,6 +94,6 @@ None at the moment
 
 ## Copyright and License
 
-Copyright © `2018` `Acumatica`
+Copyright © `2019` `Acumatica`
 
 This component is licensed under the MIT License, a copy of which is available online [here](LICENSE.md)
