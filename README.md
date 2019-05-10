@@ -11,6 +11,10 @@ This integration doesn’t include the return and refund of the orders.
 
 ### Prerequisites
 * Acumatica 2018 R2 (18.204.0013+) or higher
+* Inventory, Stock Items and Customers has to be setup prior using this integration. And this integration doesn’t include Inventory, Products and Customers synchronize between Acumatica and Amazon Marketplace.
+* Please make sure to have the Marketplace configurations created before the sync process initiated.
+* Ensure to have the Tax configuration done before the sync process initiated.
+* This integration requires the “Amazon Seller Professional Account” credentials for configuring the integrations. Please visit (https://developer.amazonservices.com/) for more information on getting MWS Credentials.
 
 Quick Start
 -----------
@@ -18,7 +22,7 @@ Quick Start
 ### Installation
 
 ##### Install customization deployment package
-1. Download PXLotSertialNbrAttributeExtPkg.zip from this repository
+1. Download PXAmazonIntegrationPkg.zip from this repository
 2. In your Acumatica ERP instance, navigate to System -> Customization -> Customization Projects (SM204505), import PXLotSertialNbrAttributeExtPkg.zip as a customization project
 3. Publish customization project.
 
