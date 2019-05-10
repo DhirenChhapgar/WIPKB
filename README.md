@@ -34,8 +34,15 @@ Quick Start
 2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
 
 ##### Configuration Settings Summary
-
 ![Screenshot](/_ReadMeImages/IN207000.png)
+
+| Element  | Description |
+| ------------- | ------------- |
+| Guest Customer ID  | All the imported Amazon orders will be associated to this configured Guest customer.  |
+| Tax Zone ID  | This Tax ID will be default Tax ID to all the imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab.
+* Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID  |
+|--- |--- |
+
 
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
 4. Create Purchase Order (PO301000) for Stock Item created in Step # 3. And move forward with creating Purchase Receipt (PO302000) for this Purchase Order.
