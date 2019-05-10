@@ -32,7 +32,6 @@ Quick Start
 
 1. The first configuration step is Sales Order Preferences and we can use this tab to select the default configuration settings which will be applied to the imported Amazon orders and these settings are common for both FBA and FBM type of orders
 2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
-
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
 ##### Configuration Settings Summary
@@ -44,7 +43,25 @@ Quick Start
 | **Payment Method ID** | This Payment Method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
 | **Ship Via**          | This Ship Via method will be applied to all the imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. Admin can change the Ship Via method if requires but this will not impact anything at Amazon side. |
 | **Initial From Date** | This field is used to set, after which date of orders the system should consider and available for sync in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then the system will display the amazon orders which are placed from 1st January 2019 only. A note is provided for this field as “Baseline Date beyond which Orders will be synced from Amazon into Acumatica. Please note that Initial From Date field cannot be changed as soon as an order is imported into Acumatica”. |
-  
+ 
+#### Marketplace Configuration
+
+Marketplace Configuration Screen is used to control various features of the Integration. The configuration settings will include the following fields information. Please refer to the below screenshot.
+![Screenshot](/_ReadMeImages/IN207000.png)
+
+##### Marketplace Configuration Summary
+
+| Element               | Description |
+| :---                  | :--- |
+| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
+| **Status** | This field is used to mark a specific Integration as Active / Inactive. If the integration is marked as Inactive, then system will not display the details/logs related to this specific integration.  |
+| **Integration Type** | Depending on the selection of the Integration type, respective Marketplace ID will be used for the API calls to fetch the Orders / Data related to that respective Marketplace, example Marketplace ID will be “XXXXXXXXXXXXX” for Amazon FBA (US). The list of values for this field is provided below: <ul><li>item1</li><li>item2</li></ul> |
+| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
+| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
+| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
+| **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID.  |
+
+
 3. Navigate to Stock Item Screen (IN202500) and create a new Stock Item having Lot/Serial class created in Step # 2.
 4. Create Purchase Order (PO301000) for Stock Item created in Step # 3. And move forward with creating Purchase Receipt (PO302000) for this Purchase Order.
 5. Click on Allocations button, you should be able to see Attributes specified in Step # 2 and can specify value for them.
