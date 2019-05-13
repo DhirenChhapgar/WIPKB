@@ -138,12 +138,12 @@ This screen (SO509300) is used to submit the feed notification to Amazon Marketp
 | **To Date** | This field considers the Shipment Date. All the shipments which are placed till the selected date, are retrieved and available for submitting the feed. |
 | **Integration ID** | This field list outs all the available FBM integration types/sellers. Please select the required seller ID and all the orders which are completed by the shipment process under selected seller will be shown for feed submit. Only the FBM type of integration ID’s will be shown in this field. |
 | **Results Grid** | Based on the selected date and FBM integration ID, all the matched records will be displayed in this grid. The user can select the required number of orders for submit feed. <ul><li>This grid will show the detailed shipment information of each amazon order.</li><ul> |
-| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. | Acumatica Field | Amazon Order -> Package -> Edit Shipment |
-| :--- | :--- |
-| **Shipment Date** | Ship Date |
-| **Amazon Carrier Code** | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
-| **Ship Via/Service Method** | Shipping Service |
-| **Packages -> Tracking Number** | Tracking ID | |
+| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. /| Acumatica Field /| Amazon Order -> Package -> Edit Shipment /|
+/| :--- /| :--- /|
+/| **Shipment Date** /| Ship Date /|
+/| **Amazon Carrier Code** /| Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> /|
+/| **Ship Via/Service Method** /| Shipping Service /|
+/| **Packages -> Tracking Number** /| Tracking ID /| |
 | **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. 
 After submitting the feed with the help of this screen, the shipment information including tracking number will be submitted and updated at Amazon Marketplace. |
 
