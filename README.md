@@ -40,7 +40,7 @@ Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Co
  | **Tax Zone ID**       | This Tax ID will be default Tax ID to all imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. <ul><li>Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID</ul></li> |
  | **Payment Method ID** | This Payment Method will be applied to all imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
  | **Ship Via**          | This Ship Via method will be applied to all imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. |
- | **Initial From Date** | Cut-off date after which orders will be available for sync in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then system will fetch amazon orders which are placed from 1st January 2019. |
+ | **Initial From Date** | Cut-off date after which orders will be available for import in Schedule import orders screen. Assume that you have configured the date “1st Jan 2019”, then system will fetch amazon orders which are placed from 1st January 2019. |
  
 #### Marketplace Configuration
 
@@ -63,11 +63,12 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | **Secret Key** | This field is used to configure the Secret Key of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
 | **Marketplace ID** | This field is used to configure the Marketplace ID of the respective Seller. Each integration type will have its own Marketplace ID. |
 | **Description** | This field is used to add the custom description about the Integration. |
-| **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not for orders syncing. If the provided credentials are incorrect then the system will show an error message. |
+| **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not. If the provided credentials are incorrect then the system will show an error message. |
 | **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping. |
 
 #### Amazon Tax Configuration
-Amazon Tax Amount will be brought into Acumatica at the time of order sync (FBA & FBM). To match the order Taxes and Totals on both systems.
+Amazon Tax Amount will be brought into Acumatica at the time of order import (FBA & FBM). To match the order Taxes and Totals on both systems.
+
 Following are the list of steps that need to be followed to enable manual taxes in Acumatica:
 
 * Navigate to Tax Categories screen (TX205500) and create new tax category "AMAZONTC"
@@ -104,12 +105,12 @@ Once the order is imported, you can view the order details from Sales Order scre
 | **Process All Integrations** | This option is used to retrieve the orders from all active marketplace configurations at once. |
 | **Records Grid** | After providing the required input parameters at header sections, such as giving the required period and selecting the required integration ID, the pulled records can be viewed by using this grid. |
 | **Prepare** | This button is used to retrieve the Amazon orders for the given period and under selected Integration ID. We can perform this action for any number of times and each time it will fetch new records if any new orders are created under the given period. After successful prepare operation, the system will display all the fetched Amazon orders under results grid which will be ready for importing into Acumatica. |
-| **Import** | This button is used to import the fetched Amazon orders into Acumatica. Only the selected orders will be imported into the system. Once an order is imported, then the same order will no longer available for importing again. During this import process, all the successful imports and failed to sync the records due to various reasons details will be maintained in separate GI log screens. |
+| **Import** | This button is used to import the fetched Amazon orders into Acumatica. Only the selected orders will be imported into the system. Once an order is imported, then the same order will no longer available for importing again. During this import process, all the successful imports and failed to import details will be maintained in separate GI log screens. |
 | **Import All** | Import button is used to import only the selected Amazon orders, whereas this "Import All" button is used to import all the available orders into Acumatica at once. One doesn’t have to select any specific order for processing all the records, by clicking on the "Import All" button the system will automatically selects all the available orders from the results grid and processes for importing. Start date can be selected, from which date the orders should be pulled for importing into Acumatica. |
 
 #### Schedule Import Orders
 
-With the help of this screen (SO509200), one can schedule “Prepare and Import” of orders from the last sync date to required date. We can also schedule prepare and import process of all the active integrations at a time.
+With the help of this screen (SO509200), one can schedule “Prepare and Import” of orders from the last import date to required date. We can also schedule prepare and import process of all the active integrations at a time.
 
 ![Screenshot](/_ReadMeImages/SO509200.png)
 
@@ -124,7 +125,7 @@ This screen is similar to Import Orders screen and the difference is that both P
 | **Integration ID** | This field will display the list of all active Marketplace Configurations. With the help of this field, you can select from which seller account orders required to be prepared and imported. Both FBA and FBM type of orders can be processed with this field. |
 | **Process All Integrations** | The above Integration ID field is used to retrieve the orders from one marketplace integration at a time, whereas this “Process All Integrations” option is used to retrieve the orders from all active marketplace configurations at once. |
 | **Records Grid** | After providing the required input parameters at header sections, such as giving the required period and selecting the required integration ID, the pulled records can be viewed by using this grid. |
-| **Prepare & Import** | This button is used to import (no prepare and import separate actions required) all the Amazon orders into Acumatica for the displayed period and under selected Integration ID(s). After successful operation, the user can check all the imported orders in Sales order screen. All the GI log screens will be updated accordingly. <ul><li>Once the operation completed, the respective scheduled rows will be disappeared from this screen.</li><li>For each schedule, the system will assign one process ID automatically and the user can check all the details in GI log screens with this process ID.</li><ul> |
+| **Prepare & Import** | This button is used to import (no prepare and import separate actions required) all the Amazon orders into Acumatica for the displayed period and under selected Integration ID(s). After successful operation, the user can check all the imported orders in Sales order screen. <ul><li>Once the operation completed, the respective scheduled rows will be disappeared from this screen.</li><li>For each schedule, the system will assign one process ID automatically and the user can check all the details in GI log screens with this process ID.</li><ul> |
 
 #### Submit FBM Shipment Information
 
@@ -139,15 +140,15 @@ This screen (SO509300) is used to submit the feed notification to Amazon Marketp
 | **To Date** | This field considers the Shipment Date. All the shipments which are placed till the selected date, are retrieved and available for submitting the feed. |
 | **Integration ID** | This field list outs all the available FBM integration types/sellers. Please select the required seller ID and all the orders which are completed by the shipment process under selected seller will be shown for feed submit. Only the FBM type of integration ID’s will be shown in this field. |
 | **Results Grid** | Based on the selected date and FBM integration ID, all the matched records will be displayed in this grid. The user can select the required number of orders for submit feed. <ul><li>This grid will show the detailed shipment information of each amazon order.</li><ul> |
-| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. |
-| **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. |
+| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failure details will be maintained in separate GI log screens. |
+| **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes. |
 
 FBM Shipping information will be updated in Amazon as per below mapping:
 
 | **Acumatica Field** | **Amazon Order -> Package -> Edit Shipment** |
 | :--- | :--- |
 | Shipment Date | Ship Date |
-| Amazon Carrier Code | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
+| Amazon Carrier Code <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> | Carrier |
 | Ship Via / Service Method | Shipping Service |
 | Packages -> Tracking Number | Tracking ID |
 
