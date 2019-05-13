@@ -10,7 +10,7 @@ Using this integration user can import orders placed on Amazon Marketplace into 
 Seller sells and Amazon ships. Seller sends bulk products to Amazon’s fulfillment centers for Amazon to pick, pack, and ship products once sold. Integration imports such orders as invoice orders. Amazon Orders with status Shipped are considered during import process.
 
 ##### Fulfilled by Merchant (FBM ): 
-Seller lists the products on Amazon while handling storage and all aspects of order fulfillment. Integration imports such orders as sales orders, seller is required to pick, pack, and ship products part of such orders. Shipment/Fulfilment details needs to be submitted back to Amazon.
+Seller lists the products on Amazon while handling storage and all aspects of order fulfillment. Integration imports such orders as sales orders, seller is required to pick, pack, and ship products part of such orders. Shipment/Fulfilment details needs to be submitted back to Amazon. Amazon Orders with status Unshipped are considered during import process.
 
 ### Prerequisites
 * Acumatica 2018 R2 (18.204.0013+) or higher
