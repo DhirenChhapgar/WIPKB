@@ -69,7 +69,7 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not. If the provided credentials are incorrect then the system will show an error message. |
 | **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping. |
 
-#### Amazon Tax Configuration
+#### Tax Configuration for Amazon Integration
 Amazon Tax Amount will be brought into Acumatica at the time of order import (FBA & FBM). To match the order Taxes and Totals on both systems.
 
 Following are the list of steps that need to be followed to enable manual taxes in Acumatica:
@@ -89,6 +89,15 @@ Following are the list of steps that need to be followed to enable manual taxes 
 * In Taxes screen, select Tax Category "AMAZONTC" created in prior step.
 
 ![Screenshot](/_ReadMeImages/TX205000a.png)
+
+#### Handling Discounts
+
+Applicable discount is imported as Manual Discount for line item.
+
+#### Handling Shipping/Freight Charges
+
+Net Shipping charge (shipping charge – shipping discount) is stored in **Premium Freight Price** field in Totals tab of the Sales Order.
+Import process imports shipping charge and shipping discount per order line. Aggregated value of these fields is stored in respective fields in Total tab as well. 
 
 ### Usage
 
