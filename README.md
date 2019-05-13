@@ -86,11 +86,11 @@ Following are the list of steps that need to be followed to enable manual taxes 
 ### Usage
 
 #### Import Orders
-This screen (SO509100) is used to sync the Amazon orders from Amazon Marketplace. All the orders will be displayed based on the mapped configuration and given input parameters.
+This screen (SO509100) is used to import Amazon orders from Amazon Marketplace. 
 
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
-With the help of this screen, import/export of the orders can be done from any configured Amazon Marketplace. Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
+Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
 
 | Element               | Description |
 | :---                  | :--- |
