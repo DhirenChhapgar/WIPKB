@@ -31,7 +31,7 @@ Quick Start
 
 #### Sales Order Preferences
 
-Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab and specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
+Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
 
 ![Screenshot](/_ReadMeImages/SO101000.png)
 
@@ -61,9 +61,9 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | **Warehouse** | All active warehouses will be loaded from the system to select specific warehouse in Acumatica for order processing. All the imported orders under this specific integration will be associated to this configured warehouse by default. |
 | **Order Type** | All the active order types will be loaded from the system to select specific Order type. Based on the selected integration type these order type template will be loaded for selection. <ul><li>For FBA integrations types the system will display the “IN – Invoice” type templates for the selection, whereas for FBM Integration type it will display “SO – Sales Order” template order types.</li></ul> |
 | **Seller ID** | This field is used to configure the Amazon Marketplace Seller ID. |
-| **Auth Token** | This field is used to configure the Auth Token of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
-| **Access Key** | This field is used to configure the Access Key of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
-| **Secret Key** | This field is used to configure the Secret Key of the respective Seller. This field is encrypted and cannot see the provided data in this field. |
+| **Auth Token** | This field is used to configure the Auth Token of the respective Seller. |
+| **Access Key** | This field is used to configure the Access Key of the respective Seller. |
+| **Secret Key** | This field is used to configure the Secret Key of the respective Seller. |
 | **Marketplace ID** | This field is used to configure the Marketplace ID of the respective Seller. Each integration type will have its own Marketplace ID. |
 | **Description** | This field is used to add the custom description about the Integration. |
 | **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not. If the provided credentials are incorrect then the system will show an error message. |
@@ -98,7 +98,7 @@ This screen (SO509100) is used to import Amazon orders from Amazon Marketplace.
 ![Screenshot](/_ReadMeImages/SO509100.png)
 
 ##### Import Orders Summary
-Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
+Once the order is imported, you can view the order details from Sales Order screen for respective order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
 
 | Element               | Description |
 | :---                  | :--- |
