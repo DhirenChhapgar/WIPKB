@@ -88,6 +88,8 @@ Following are the list of steps that need to be followed to enable manual taxes 
 #### Import Orders
 This screen (SO509100) is used to sync the Amazon orders from Amazon Marketplace. All the orders will be displayed based on the mapped configuration and given input parameters.
 
+![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+
 With the help of this screen, import/export of the orders can be done from any configured Amazon Marketplace. Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
 
 | Element               | Description |
@@ -102,6 +104,22 @@ With the help of this screen, import/export of the orders can be done from any c
 | **Import All** | Import button is used to import only the selected Amazon orders, whereas this "Import All" button is used to import all the available orders into Acumatica at once. One doesn’t have to select any specific order for processing all the records, by clicking on the "Import All" button the system will automatically selects all the available orders from the results grid and processes for importing. Start date can be selected, from which date the orders should be pulled for importing into Acumatica. |
 
 #### Schedule Import Orders
+
+With the help of this screen (SO509200), one can schedule “Prepare and Import” of orders from the last sync date to required date. We can also schedule prepare and import process of all the active integrations at a time.
+
+![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+
+This screen is similar to Import Orders screen and the difference is that both Prepare and Import operations can be performed at once whereas these actions can be performed individually in Import Orders screen (SO509100).
+
+| Element               | Description |
+| :---                  | :--- |
+| **From Date** | Start date can be selected, from which date the orders should be pulled for importing into Acumatica. |
+| **To Date** | End date can be selected, till what date the orders should be pulled for importing into Acumatica. <ul><li>The Amazon orders will be retrieved by clicking on the prepare button for the period between the selected "From" and "To" Dates.</li><ul> |
+| **Integration ID** | This field will display the list of all active Marketplace Configurations. With the help of this field, you can select from which seller account orders required to be prepared and imported. Both FBA and FBM type of orders can be processed with this field. |
+| **Process All Integrations** | The above Integration ID field is used to retrieve the orders from one marketplace integration at a time, whereas this “Process All Integrations” option is used to retrieve the orders from all active marketplace configurations at once. |
+| **Records Grid** | After providing the required input parameters at header sections, such as giving the required period and selecting the required integration ID, the pulled records can be viewed by using this grid. |
+| **Prepare & Import	** | This button is used to import (no prepare and import separate actions required) all the Amazon orders into Acumatica for the displayed period and under selected Integration ID(s). After successful operation, the user can check all the imported orders in Sales order screen. All the GI log screens will be updated accordingly. <ul><li>Once the operation completed, the respective scheduled rows will be disappeared from this screen.</li><li>For each schedule, the system will assign one process ID automatically and the user can check all the details in GI log screens with this process ID.</li><ul> |
+
 
 #### Import FBA Tracking #
 
