@@ -30,7 +30,7 @@ Quick Start
 
 Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab and specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
 
-![Screenshot](/_ReadMeImages/IN207000.png)
+![Screenshot](/_ReadMeImages/SO101000.png)
 
 ##### Configuration Settings Summary
 
@@ -46,7 +46,7 @@ Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Co
 
 Marketplace Configuration Screen is used to control various features of the Integration. The configuration settings will include following fields information.
 
-![Screenshot](/_ReadMeImages/IN207000.png)
+![Screenshot](/_ReadMeImages/SO204000.png)
 
 ##### Marketplace Configuration Summary
 
@@ -71,23 +71,23 @@ Amazon Tax Amount will be brought into Acumatica at the time of order sync (FBA 
 Following are the list of steps that need to be followed to enable manual taxes in Acumatica:
 
 * Navigate to Tax Categories screen (TX205500) and create new tax category "AMAZONTC"
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/TX205500.png)
 
 * Navigate to Tax Zones screen (TX206000) and create new Tax Zone ID "AMAZONTZ" add assign default tax category created in prior step.
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/TX206000.png)
 
 * Navigate to Taxes Screen (TX205000) and create new Tax ID "AMAZONTAX" and assign an unlimited Tax Schedule. Make sure to check “Propagate Manually Set Tax….” check box.
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/TX205000.png)
 
 * In Taxes screen, select Tax Category "AMAZONTC" created in prior step.
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/TX205000a.png)
 
 ### Usage
 
 #### Import Orders
 This screen (SO509100) is used to import Amazon orders from Amazon Marketplace. 
 
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/SO509100.png)
 
 ##### Import Orders Summary
 Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
@@ -107,7 +107,7 @@ Once the order is imported, you can view the order details from Sales Order scre
 
 With the help of this screen (SO509200), one can schedule “Prepare and Import” of orders from the last sync date to required date. We can also schedule prepare and import process of all the active integrations at a time.
 
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/SO509200.png)
 
 ##### Schedule Import Orders Summary
 
@@ -120,13 +120,13 @@ This screen is similar to Import Orders screen and the difference is that both P
 | **Integration ID** | This field will display the list of all active Marketplace Configurations. With the help of this field, you can select from which seller account orders required to be prepared and imported. Both FBA and FBM type of orders can be processed with this field. |
 | **Process All Integrations** | The above Integration ID field is used to retrieve the orders from one marketplace integration at a time, whereas this “Process All Integrations” option is used to retrieve the orders from all active marketplace configurations at once. |
 | **Records Grid** | After providing the required input parameters at header sections, such as giving the required period and selecting the required integration ID, the pulled records can be viewed by using this grid. |
-| **Prepare & Import	** | This button is used to import (no prepare and import separate actions required) all the Amazon orders into Acumatica for the displayed period and under selected Integration ID(s). After successful operation, the user can check all the imported orders in Sales order screen. All the GI log screens will be updated accordingly. <ul><li>Once the operation completed, the respective scheduled rows will be disappeared from this screen.</li><li>For each schedule, the system will assign one process ID automatically and the user can check all the details in GI log screens with this process ID.</li><ul> |
+| **Prepare & Import** | This button is used to import (no prepare and import separate actions required) all the Amazon orders into Acumatica for the displayed period and under selected Integration ID(s). After successful operation, the user can check all the imported orders in Sales order screen. All the GI log screens will be updated accordingly. <ul><li>Once the operation completed, the respective scheduled rows will be disappeared from this screen.</li><li>For each schedule, the system will assign one process ID automatically and the user can check all the details in GI log screens with this process ID.</li><ul> |
 
 #### Submit FBM Shipment Information
 
 This screen (SO509300) is used to submit the feed notification to Amazon Marketplace from Acumatica application. All the FBM type of orders, which are in “Completed” status, are available for feed submit. That means, the fulfillment process will happen at Acumatica side and the shipping information / tracking number will be sent to Amazon Marketplace. 
 
-![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+![Screenshot](/_ReadMeImages/SO509300.png)
 
 ##### Submit FBM Shipment Information Summary
 
@@ -149,19 +149,23 @@ FBM Shipping information will be updated in Amazon as per below mapping:
 
 #### Import FBA Tracking #
 
-This screen (SO509400) is used to retrieve the tracking information to the imported FBA orders in Acumatica.
+This screen (SO509400) is used to retrieve the tracking number to the imported FBA orders in Acumatica.
 
-Whenever you import FBA order from the marketplace, the orders will be imported and tracking number will not be assigned to the order. All the imported orders will be displayed in this screen and you can retrieve and update the tracking numbers to the imported order by using “Process / Process all” actions. Once the process action performed, the tracking numbers will be assigned to the respective orders and those orders will be removed from this screen.
+![Screenshot](/_ReadMeImages/SO509400.png)
 
-| Acumatica Field | Amazon Order -> Package -> Edit Shipment |
+Whenever you import FBA order from the marketplace, the orders will be imported and tracking number will not be assigned to the order. All the imported orders will be displayed in this screen and you can retrieve and update the tracking numbers to the imported order by using “Process / Process all” actions. Once the process action performed, the tracking numbers will be assigned to the respective order's note and those orders will be removed from this screen.
+
+##### Import FBA Tracking # Summary
+
+| Element | Description |
 | :--- | :--- |
 | **From Date** | You can select the start date, from which imported date the orders should be pulled for processing the tracking details. |
 | **To Date** | You can select the end date, till which imported date the orders should be pulled for processing the tracking information. <ul><li>The imported FBA orders will be pulled and displayed by clicking on the process button for the period between these selected From and To Dates</li></ul> |
 | **Current Day** | If you select this check box, then From and To dates will be disabled and only today date records will be displayed for processing the tracking information. |
 | **Integration ID** | This field will show the list of all active FBA Marketplace Configurations. With the help of this field, you can select from which seller account orders required to be processed. |
 | **Process All Integrations** | The above Integration ID field is used to retrieve the orders from one marketplace integration at a time, whereas this “Process All Integrations” option is used to retrieve the orders from all active FBA marketplace configurations at once. |
-| **Process** | This button is used to process the Tracking information. Only the selected orders will be processed, once an order is processed, then the same order will no longer be available for processing again. |
-| **Process All** | Process button is used to process only the selected Amazon orders, whereas this Process All button is used to process all the available orders at once. You do not require of selecting any specific order for processing all the records, by clicking on the Process all button the system will automatically selects all the available orders from the results grid and process for adding the tracing information to the imported order. |
+| **Process** | This button is used to import the Tracking number. Only the selected orders will be processed, once an order is processed, then the same order will no longer be available for processing again. |
+| **Process All** | Process button is used to process only the selected Amazon orders, whereas this Process All button is used to process all the available orders at once. You do not require of selecting any specific order for processing all the records, by clicking on the Process all button the system will automatically selects all the available orders from the results grid and process for adding the tracking number to the imported order's note. |
 | **Records Grid** | After providing the required input parameters at header sections such as giving the required period and selecting the required integration ID, you can view the pulled records by using this grid. |
 
 #### Amazon Integration Logs
