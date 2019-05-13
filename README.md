@@ -120,10 +120,34 @@ This screen is similar to Import Orders screen and the difference is that both P
 | **Records Grid** | After providing the required input parameters at header sections, such as giving the required period and selecting the required integration ID, the pulled records can be viewed by using this grid. |
 | **Prepare & Import	** | This button is used to import (no prepare and import separate actions required) all the Amazon orders into Acumatica for the displayed period and under selected Integration ID(s). After successful operation, the user can check all the imported orders in Sales order screen. All the GI log screens will be updated accordingly. <ul><li>Once the operation completed, the respective scheduled rows will be disappeared from this screen.</li><li>For each schedule, the system will assign one process ID automatically and the user can check all the details in GI log screens with this process ID.</li><ul> |
 
+#### Submit FBM Shipment Information
+
+This screen (SO509300) is used to submit the feed notification to Amazon Marketplace from Acumatica application. All the FBM type of orders, which are in “Completed” status, are available for feed submit. That means, the fulfillment process will happen at Acumatica side and the shipping information / tracking number will be sent to Amazon Marketplace. 
+
+![Screenshot](/_ReadMeImages/PO302000Allocation.png)
+
+| Acumatica Field | Amazon Order -> Package -> Edit Shipment |
+| :--- | :--- |
+| **Shipment Date** | Ship Date |
+| **Amazon Carrier Code** | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
+| **Ship Via/Service Method** | Shipping Service |
+| **Packages -> Tracking Number** | Tracking ID |
+
+| Element               | Description |
+| :---                  | :--- |
+| **To Date** | This field considers the Shipment Date. All the shipments which are placed till the selected date, are retrieved and available for submitting the feed. |
+| **Integration ID** | This field list outs all the available FBM integration types/sellers. Please select the required seller ID and all the orders which are completed by the shipment process under selected seller will be shown for feed submit. Only the FBM type of integration ID’s will be shown in this field. |
+| **Results Grid** | Based on the selected date and FBM integration ID, all the matched records will be displayed in this grid. The user can select the required number of orders for submit feed. <ul><li>This grid will show the detailed shipment information of each amazon order.</li><ul> |
+| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. | Acumatica Field | Amazon Order -> Package -> Edit Shipment |
+| :--- | :--- |
+| **Shipment Date** | Ship Date |
+| **Amazon Carrier Code** | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
+| **Ship Via/Service Method** | Shipping Service |
+| **Packages -> Tracking Number** | Tracking ID | |
+| **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. 
+After submitting the feed with the help of this screen, the shipment information including tracking number will be submitted and updated at Amazon Marketplace. |
 
 #### Import FBA Tracking #
-
-#### Submit FBM Shipment Info
 
 
 Known Issues
