@@ -136,8 +136,7 @@ This screen (SO509300) is used to submit the feed notification to Amazon Marketp
 | **Integration ID** | This field list outs all the available FBM integration types/sellers. Please select the required seller ID and all the orders which are completed by the shipment process under selected seller will be shown for feed submit. Only the FBM type of integration ID’s will be shown in this field. |
 | **Results Grid** | Based on the selected date and FBM integration ID, all the matched records will be displayed in this grid. The user can select the required number of orders for submit feed. <ul><li>This grid will show the detailed shipment information of each amazon order.</li><ul> |
 | **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. |
-| **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. 
-After submitting the feed with the help of this screen, the shipment information including tracking number will be submitted and updated at Amazon Marketplace. |
+| **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. |
 
 FBM Shipping information will be updated in Amazon as per below mapping:
 
@@ -165,6 +164,21 @@ Whenever you import FBA order from the marketplace, the orders will be imported 
 | **Process All** | Process button is used to process only the selected Amazon orders, whereas this Process All button is used to process all the available orders at once. You do not require of selecting any specific order for processing all the records, by clicking on the Process all button the system will automatically selects all the available orders from the results grid and process for adding the tracing information to the imported order. |
 | **Records Grid** | After providing the required input parameters at header sections such as giving the required period and selecting the required integration ID, you can view the pulled records by using this grid. |
 
+#### Amazon Integration Logs
+
+Below screens can be used to view logs created during import order or submit feed processes of this integration.
+
+* Amazon SO Process Log (AZ000008)
+* Amazon SO Import Log (AZ000016)
+* Amazon SO Detailed Log (AZ000015)
+* Amazon Shipment Process Log (AZ000012)
+* Amazon Shipment Submit Log (AZ000014)
+* Amazon Shipment Detailed Log (AZ000013)
+
+Below screens can be used to clear/remove logs created during import order or submit feed processes of this integration.
+
+* Amazon SO Clear Log (SO401001)
+* Amazon Shipment Clear Log (SO401000)
 
 Known Issues
 ------------
