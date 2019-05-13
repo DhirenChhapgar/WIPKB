@@ -78,7 +78,7 @@ Following are the list of steps that need to be followed to enable manual taxes 
 
 ![Screenshot](/_ReadMeImages/TX205500.png)
 
-* Navigate to Tax Zones screen (TX206000) and create new Tax Zone ID "AMAZONTZ" add assign default tax category created in prior step.
+* Navigate to Tax Zones screen (TX206000) and create new Tax Zone ID "AMAZONTZ" and assign default tax category created in prior step.
 
 ![Screenshot](/_ReadMeImages/TX206000.png)
 
