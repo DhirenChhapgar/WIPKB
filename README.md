@@ -126,28 +126,40 @@ This screen (SO509300) is used to submit the feed notification to Amazon Marketp
 
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
-| Acumatica Field | Amazon Order -> Package -> Edit Shipment |
-| :--- | :--- |
-| **Shipment Date** | Ship Date |
-| **Amazon Carrier Code** | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
-| **Ship Via/Service Method** | Shipping Service |
-| **Packages -> Tracking Number** | Tracking ID |
-
 | Element               | Description |
 | :---                  | :--- |
 | **To Date** | This field considers the Shipment Date. All the shipments which are placed till the selected date, are retrieved and available for submitting the feed. |
 | **Integration ID** | This field list outs all the available FBM integration types/sellers. Please select the required seller ID and all the orders which are completed by the shipment process under selected seller will be shown for feed submit. Only the FBM type of integration ID’s will be shown in this field. |
 | **Results Grid** | Based on the selected date and FBM integration ID, all the matched records will be displayed in this grid. The user can select the required number of orders for submit feed. <ul><li>This grid will show the detailed shipment information of each amazon order.</li><ul> |
-| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. /| Acumatica Field /| Amazon Order -> Package -> Edit Shipment /|
-/| :--- /| :--- /|
-/| **Shipment Date** /| Ship Date /|
-/| **Amazon Carrier Code** /| Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> /|
-/| **Ship Via/Service Method** /| Shipping Service /|
-/| **Packages -> Tracking Number** /| Tracking ID /| |
+| **Submit Feed** | This button is used to submit the feed information from Acumatica to Amazon Marketplace. Only the selected orders will be submitted from the system. Once an order is submitted, then the same order will no longer be available for submitting again. During this Submit feed process, all the successful submits and failed to sync the records due to various reasons details will be maintained in separate GI log screens. |
 | **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. 
 After submitting the feed with the help of this screen, the shipment information including tracking number will be submitted and updated at Amazon Marketplace. |
 
+FBM Shipping information will be updated in Amazon as per below mapping.
+
+| Acumatica Field | Amazon Order -> Package -> Edit Shipment |
+| :--- | :--- |
+| **Shipment Date** | Ship Date |
+| **Amazon Carrier Code** | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
+| **Ship Via / Service Method** | Shipping Service |
+| **Packages -> Tracking Number** | Tracking ID |
+
 #### Import FBA Tracking #
+
+This screen (SO509400) is used to retrieve the tracking information to the imported FBA orders in Acumatica.
+
+Whenever you import FBA order from the marketplace, the orders will be imported and tracking number will not be assigned to the order. All the imported orders will be displayed in this screen and you can retrieve and update the tracking numbers to the imported order by using “Process / Process all” actions. Once the process action performed, the tracking numbers will be assigned to the respective orders and those orders will be removed from this screen.
+
+| Acumatica Field | Amazon Order -> Package -> Edit Shipment |
+| :--- | :--- |
+| **From Date** | You can select the start date, from which imported date the orders should be pulled for processing the tracking details. |
+| **To Date** | You can select the end date, till which imported date the orders should be pulled for processing the tracking information. <ul><li>The imported FBA orders will be pulled and displayed by clicking on the process button for the period between these selected From and To Dates</li></ul> |
+| **Current Day** | If you select this check box, then From and To dates will be disabled and only today date records will be displayed for processing the tracking information. |
+| **Integration ID** | This field will show the list of all active FBA Marketplace Configurations. With the help of this field, you can select from which seller account orders required to be processed. |
+| **Process All Integrations** | The above Integration ID field is used to retrieve the orders from one marketplace integration at a time, whereas this “Process All Integrations” option is used to retrieve the orders from all active FBA marketplace configurations at once. |
+| **Process** | This button is used to process the Tracking information. Only the selected orders will be processed, once an order is processed, then the same order will no longer be available for processing again. |
+| **Process All** | Process button is used to process only the selected Amazon orders, whereas this Process All button is used to process all the available orders at once. You do not require of selecting any specific order for processing all the records, by clicking on the Process all button the system will automatically selects all the available orders from the results grid and process for adding the tracing information to the imported order. |
+| **Records Grid** | After providing the required input parameters at header sections such as giving the required period and selecting the required integration ID, you can view the pulled records by using this grid. |
 
 
 Known Issues
