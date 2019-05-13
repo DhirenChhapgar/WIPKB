@@ -11,7 +11,7 @@ This integration doesn’t include
 
 ### Prerequisites
 * Acumatica 2018 R2 (18.204.0013+) or higher
-* Inventory/Stock, Products and Customers has to be setup prior using this integration.
+* Inventory/Stock, Products and Customers has to be setup prior using this integration. Product/Stock Item needs to be setup in Acumatica by either having matching Inventory ID OR Cross-Reference (Alternate ID) same as Amazon SellerSKU/ASIN (specified in Marketplace Configuration Field Mapping) 
 * This integration requires “Amazon Seller Professional Account” credentials for configuring integrations. Please visit (https://developer.amazonservices.com/) for more information on getting MWS Credentials.
 
 Quick Start
@@ -44,7 +44,7 @@ Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Co
  
 #### Marketplace Configuration
 
-Marketplace Configuration Screen is used to control various features of the Integration. The configuration settings will include following fields information.
+Marketplace Configuration Screen is used to control various features of the Integration. 
 
 ![Screenshot](/_ReadMeImages/SO204000.png)
 
@@ -54,7 +54,7 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | :---                  | :--- |
 | **Integration ID** | You can set a unique value that can be used to identify all the configuration details in other screens related to this integration ID. |
 | **Status** | This field is used to mark a specific Integration as Active / Inactive. If the integration is marked as Inactive, then system will not display the details/logs related to this specific integration. |
-| **Integration Type** | Depending on the selection of the Integration type, respective Marketplace ID will be used for the API calls to fetch the Orders / Data related to that respective Marketplace, example Marketplace ID will be “XXXXXXXXXXXXX” for Amazon FBA (US). The list of values for this field is provided below: <ul><li>Amazon FBA</li><li>Amazon.ca FBA</li><li>Amazon.co.uk FBA</li><li>Amazon.de FBA</li><li>Amazon.jp FBA</li><li>Amazon.in FBA</li><li>Amazon FBM</li></ul> |
+| **Integration Type** | Available Integration Types : <ul><li>Amazon FBA</li><li>Amazon.ca FBA</li><li>Amazon.co.uk FBA</li><li>Amazon.de FBA</li><li>Amazon.jp FBA</li><li>Amazon.in FBA</li><li>Amazon FBM</li></ul> |
 | **Warehouse** | All active warehouses will be loaded from the system to select specific warehouse in Acumatica for order processing. All the imported orders under this specific integration will be associated to this configured warehouse by default. |
 | **Order Type** | All the active order types will be loaded from the system to select specific Order type. Based on the selected integration type these order type template will be loaded for selection. <ul><li>For FBA integrations types the system will display the “IN – Invoice” type templates for the selection, whereas for FBM Integration type it will display “SO – Sales Order” template order types.</li></ul> |
 | **Seller ID** | This field is used to configure the Amazon Marketplace Seller ID. |
@@ -64,7 +64,7 @@ Marketplace Configuration Screen is used to control various features of the Inte
 | **Marketplace ID** | This field is used to configure the Marketplace ID of the respective Seller. Each integration type will have its own Marketplace ID. |
 | **Description** | This field is used to add the custom description about the Integration. |
 | **Test Connection** | This button is used to validate the provided credentials and shows the result whether given configuration details are correct or not for orders syncing. If the provided credentials are incorrect then the system will show an error message. |
-| **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping.|
+| **Field Mapping Configuration** | This grid is used to make the field mappings for importing the Amazon order values into required target fields of Acumatica Sales Order. Ex: We can map the configuration, “Amazon Order ID” to be displayed as Sales Order’s Customer Order number. "Marketplace Configuration.xlsx" can be used to setup mapping. |
 
 #### Amazon Tax Configuration
 Amazon Tax Amount will be brought into Acumatica at the time of order sync (FBA & FBM). To match the order Taxes and Totals on both systems.
