@@ -2,18 +2,16 @@
 
 Amazon Marketplace Integration
 ==================================
-Using this integration user can import orders placed on Amazon Marketplace into Acumatica and can transfer order fulfillment details from Acumatica to Amazon Marketplace for FBM type of orders. Integration supports Fulfillment by Amazon (FBA) and Fulfillment by Merchant (FBM) fulfillment channels.
+This integration supports Fulfillment by Amazon (FBA) and Fulfillment by Merchant (FBM) fulfillment channels. Using this integration user can import orders placed on Amazon Marketplace into Acumatica and can transfer order fulfillment details from Acumatica to Amazon Marketplace for FBM type of orders.
 
 This integration doesn’t include 
 * Return and refund of orders.
-* Inventory, Products and Customers synchronize between Acumatica and Amazon Marketplace.
-* Settlement/reconcile Amazon FBA Fees etc.
+* Inventory/Stock, Products and Customers synchronize between Acumatica and Amazon Marketplace.
+* Settlement/reconcile Amazon FBA, advertisement Fees etc.
 
 ### Prerequisites
 * Acumatica 2018 R2 (18.204.0013+) or higher
-* Inventory, Stock Items and Customers has to be setup prior using this integration.
-* Please make sure to have Marketplace configurations created before sync process initiated.
-* Ensure to have Tax configuration done before sync process initiated.
+* Inventory/Stock, Products and Customers has to be setup prior using this integration.
 * This integration requires “Amazon Seller Professional Account” credentials for configuring integrations. Please visit (https://developer.amazonservices.com/) for more information on getting MWS Credentials.
 
 Quick Start
@@ -30,8 +28,8 @@ Quick Start
 
 #### Sales Order Preferences
 
-1. The first configuration step is Sales Order Preferences and we can use this tab to specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
-2. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
+1. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
+2. Specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
 
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
@@ -88,6 +86,20 @@ Following are the list of steps that need to be followed to enable manual taxes 
 ### Usage
 
 #### Import Orders
+This screen (SO509100) is used to sync the Amazon orders from Amazon Marketplace. All the orders will be displayed based on the mapped configuration and given input parameters.
+
+With the help of this screen, import/export of the orders can be done from any configured Amazon Marketplace. Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
+
+| Element               | Description |
+| :---                  | :--- |
+| **From Date** | Start date can be selected, from which date the orders should be pulled for importing into Acumatica. |
+| **To Date** | End date can be selected, till what date the orders should be pulled for importing into Acumatica. <ul><li>The Amazon orders will be retrieved by clicking on the prepare button for the period between the selected "From" and "To" Dates.</li><ul> |
+| **Integration ID** | This field will display the list of all active Marketplace Configurations. With the help of this field, you can select from which seller account orders required to be prepared and imported. Both FBA and FBM type of orders can be processed with this field. |
+| **Process All Integrations** | This option is used to retrieve the orders from all active marketplace configurations at once. |
+| **Records Grid** | After providing the required input parameters at header sections, such as giving the required period and selecting the required integration ID, the pulled records can be viewed by using this grid. |
+| **Prepare** | This button is used to retrieve the Amazon orders for the given period and under selected Integration ID. We can perform this action for any number of times and each time it will fetch new records if any new orders are created under the given period. After successful prepare operation, the system will display all the fetched Amazon orders under results grid which will be ready for importing into Acumatica. |
+| **Import** | This button is used to import the fetched Amazon orders into Acumatica. Only the selected orders will be imported into the system. Once an order is imported, then the same order will no longer available for importing again. During this import process, all the successful imports and failed to sync the records due to various reasons details will be maintained in separate GI log screens. |
+| **Import All** | Import button is used to import only the selected Amazon orders, whereas this "Import All" button is used to import all the available orders into Acumatica at once. One doesn’t have to select any specific order for processing all the records, by clicking on the "Import All" button the system will automatically selects all the available orders from the results grid and processes for importing. Start date can be selected, from which date the orders should be pulled for importing into Acumatica. |
 
 #### Schedule Import Orders
 
