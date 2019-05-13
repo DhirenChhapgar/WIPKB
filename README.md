@@ -71,15 +71,19 @@ Amazon Tax Amount will be brought into Acumatica at the time of order sync (FBA 
 Following are the list of steps that need to be followed to enable manual taxes in Acumatica:
 
 * Navigate to Tax Categories screen (TX205500) and create new tax category "AMAZONTC"
+
 ![Screenshot](/_ReadMeImages/TX205500.png)
 
 * Navigate to Tax Zones screen (TX206000) and create new Tax Zone ID "AMAZONTZ" add assign default tax category created in prior step.
+
 ![Screenshot](/_ReadMeImages/TX206000.png)
 
 * Navigate to Taxes Screen (TX205000) and create new Tax ID "AMAZONTAX" and assign an unlimited Tax Schedule. Make sure to check “Propagate Manually Set Tax….” check box.
+
 ![Screenshot](/_ReadMeImages/TX205000.png)
 
 * In Taxes screen, select Tax Category "AMAZONTC" created in prior step.
+
 ![Screenshot](/_ReadMeImages/TX205000a.png)
 
 ### Usage
