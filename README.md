@@ -31,7 +31,7 @@ Quick Start
 
 #### Sales Order Preferences
 
-Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
+Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and specify preferences which will be used during Amazon orders import and these settings are common for both FBA and FBM type of orders.
 
 ![Screenshot](/_ReadMeImages/SO101000.png)
 
@@ -39,7 +39,7 @@ Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and s
 
  | Element               | Description |
  | :---                  | :--- |
- | **Guest Customer ID** | All imported Amazon orders will be associated to this configured Guest customer.  |
+ | **Guest Customer ID** | All imported Amazon orders will be associated to this specified customer.  |
  | **Tax Zone ID**       | This Tax ID will be default Tax ID to all imported Amazon orders. The details will be shown in Sales Order form’s Tax details tab. <ul><li>Only taxes which are created with the option “Propagate Manually Set Tax Amount from Sales Orders to Invoice” can be selected as default Tax ID</ul></li> |
  | **Payment Method ID** | This Payment Method will be applied to all imported Amazon orders. The details will be shown in Sales Order form’s Payments tab. |
  | **Ship Via**          | This Ship Via method will be applied to all imported Amazon orders. The details will be shown in Sales Order form’s Shipping settings tab. |
