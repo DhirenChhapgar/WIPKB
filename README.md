@@ -28,8 +28,7 @@ Quick Start
 
 #### Sales Order Preferences
 
-1. Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab
-2. Specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
+Navigate to Sales Order Preferences (SO101000) Distribution-> Sales Orders -> Configuration -> Sales Order Preferences -> Amazon Configuration Tab and specify default configuration settings which will be applied to imported Amazon orders and these settings are common for both FBA and FBM type of orders
 
 ![Screenshot](/_ReadMeImages/IN207000.png)
 
@@ -90,6 +89,7 @@ This screen (SO509100) is used to import Amazon orders from Amazon Marketplace.
 
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
+##### Import Orders Summary
 Once the order is imported, you can view the order details from Sales Order screen under configured order type. You can also modify any details of the order once it is imported to Acumatica, but these modifications will not have any impacts at Amazon Marketplace side.
 
 | Element               | Description |
@@ -109,6 +109,8 @@ With the help of this screen (SO509200), one can schedule â€œPrepare and Importâ
 
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
+##### Schedule Import Orders Summary
+
 This screen is similar to Import Orders screen and the difference is that both Prepare and Import operations can be performed at once whereas these actions can be performed individually in Import Orders screen (SO509100).
 
 | Element               | Description |
@@ -126,6 +128,8 @@ This screen (SO509300) is used to submit the feed notification to Amazon Marketp
 
 ![Screenshot](/_ReadMeImages/PO302000Allocation.png)
 
+##### Submit FBM Shipment Information Summary
+
 | Element               | Description |
 | :---                  | :--- |
 | **To Date** | This field considers the Shipment Date. All the shipments which are placed till the selected date, are retrieved and available for submitting the feed. |
@@ -135,14 +139,14 @@ This screen (SO509300) is used to submit the feed notification to Amazon Marketp
 | **Submit Feed All** | Submit Feed button is used to submit only the selected Amazon orders, whereas this Submit Feed All button is used to submit all the available orders into Amazon Marketplace at once. We don't have to select any specific order for processing all the records, by clicking on the "Submit Feed All" button the system will automatically selects all the available orders from the results grid and processes for importing. 
 After submitting the feed with the help of this screen, the shipment information including tracking number will be submitted and updated at Amazon Marketplace. |
 
-FBM Shipping information will be updated in Amazon as per below mapping.
+FBM Shipping information will be updated in Amazon as per below mapping:
 
-| Acumatica Field | Amazon Order -> Package -> Edit Shipment |
+| **Acumatica Field** | **Amazon Order -> Package -> Edit Shipment** |
 | :--- | :--- |
-| **Shipment Date** | Ship Date |
-| **Amazon Carrier Code** | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
-| **Ship Via / Service Method** | Shipping Service |
-| **Packages -> Tracking Number** | Tracking ID |
+| Shipment Date | Ship Date |
+| Amazon Carrier Code | Carrier <ul><li>Value is case sensitive and must match with one of the supported Carrier.</li><ul> |
+| Ship Via / Service Method | Shipping Service |
+| Packages -> Tracking Number | Tracking ID |
 
 #### Import FBA Tracking #
 
