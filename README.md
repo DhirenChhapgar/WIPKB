@@ -6,10 +6,10 @@ This integration supports Fulfillment by Amazon (FBA) and Fulfillment by Merchan
 
 Using this integration user can import orders placed on Amazon Marketplace into Acumatica and can transfer order fulfillment details from Acumatica to Amazon Marketplace for FBM type of orders.
 
-##### Fulfilled by Amazon (FBA): 
+#### Fulfilled by Amazon (FBA): 
 Seller sells and Amazon ships. Seller sends bulk products to Amazon’s fulfillment centers. When products are sold, Amazon picks, packs, and ships the orders. The integration imports FBA orders as invoice orders (Sales Orders which follow the type IN invoice workflow). Amazon Orders with status Shipped are retrieved during the import process.
 
-##### Fulfilled by Merchant (FBM ): 
+#### Fulfilled by Merchant (FBM ): 
 Seller lists the products on Amazon while handling storage and all aspects of order fulfillment. When products are sold, the integration imports FBM orders as sales orders. The seller is required to pick, pack, and ship products included on such orders. Shipment/Fulfilment details needs to be submitted back to Amazon using the integration. Amazon Orders with status Unshipped are retrieved during the import process.
 
 ### Prerequisites
