@@ -33,7 +33,7 @@ Quick Start
 
 Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and specify preferences which will be used during Amazon orders import and these settings are common for both FBA and FBM type of orders.
 
-![Screenshot](/_ReadMeImages/SO101000.png) {:height="50%" width="50%"}
+![Screenshot](/_ReadMeImages/SO101000.png=50pxX50px)
 
 ##### Configuration Settings Summary
 
