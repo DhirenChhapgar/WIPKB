@@ -37,7 +37,7 @@ Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and s
 
 Some change
 
-<img src="/_ReadMeImages/SO101000.png" height="50%" width="50%">
+<img src="/_ReadMeImages/SO101000.png" height="150%" width="150%">
 
 ##### Configuration Settings Summary
 
