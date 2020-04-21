@@ -38,7 +38,7 @@ Navigate to Sales Order Preferences (SO101000) -> Amazon Configuration Tab and s
 Some change
 
 <div style="display:table-cell; vertical-align:middle; text-align:center">
- <img src="/_ReadMeImages/SO101000.png" height="25%" width="25%">
+ <img src="/_ReadMeImages/SO101000.png" height="25%" width="25%" style="display: block; margin: 0 auto;">
 </div>
 
 ##### Configuration Settings Summary
